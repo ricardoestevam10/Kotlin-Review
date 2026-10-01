@@ -1,0 +1,38 @@
+package com.example.composeinit.ui.exercicios
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import com.example.composeinit.ui.components.calcularIrrf
+
+
+
+@Composable
+fun MostrarResultado() {
+    var salario by remember { mutableStateOf("") }
+    Column() {
+
+        Text("-")
+        OutlinedTextField(
+            value = salario,
+            onValueChange = {salario = it},
+//            label = { Text("Inserir salario") },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        val salarioDouble = salario.toDoubleOrNull()
+
+        val resultado = calcularIrrf(salarioDouble)
+        Text("O resultado do calculo é $resultado")
+    }
+
+
+}
