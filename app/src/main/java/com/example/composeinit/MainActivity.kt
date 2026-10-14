@@ -15,6 +15,8 @@ import com.example.composeinit.ui.lessons.L03Parameters
 import com.example.composeinit.ui.lessons.L04Input
 import com.example.composeinit.ui.lessons.L04Modifier
 import com.example.composeinit.ui.lessons.L05ColumnRow
+import com.example.composeinit.ui.lessons.L06Box
+import com.example.composeinit.ui.lessons.L07WeightSpace
 import com.example.composeinit.ui.theme.ComposeInitTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,7 +37,9 @@ class MainActivity : ComponentActivity() {
                 //L04Input()
                // MostrarResultado()
                 //L04Modifier()
-                L05ColumnRow()
+                //L05ColumnRow()
+                //L06Box()
+                L07WeightSpace()
              //   calcularIrrf()
             }
         }
